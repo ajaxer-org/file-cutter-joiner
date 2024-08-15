@@ -8,3 +8,9 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@layer components {
+  .bg-gr-emerald {
+    @apply bg-gradient-to-b from-emerald-300 via-emerald-500 to-emerald-700;
+  }
+}
