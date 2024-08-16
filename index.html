@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Splitter with Progress</title>
+    <style>
+      #progressBar {
+        width: 100%;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      #progress {
+        width: 0%;
+        height: 20px;
+        background-color: #4caf50;
+        border-radius: 5px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>File Splitter with Progress</h1>
+    <input type="file" id="fileInput" />
+    <div id="fileSize"></div>
+    <br /><br />
+    <input type="number" id="chunkSize" placeholder="Chunk size in MB" />
+    <button onclick="splitFile()">Split File</button>
+    <div id="progressBar">
+      <div id="progress">0%</div>
+    </div>
+    <br /><br />
+    <input type="file" id="mergeInput" multiple />
+    <button onclick="mergeFiles()">Merge Files</button>
+    <div id="mergeProgressBar">
+      <div id="mergeProgress">0%</div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
